@@ -33,6 +33,8 @@ body {
     text-align: center;
     background: #2e80ce;
     border-radius: 999px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -80,7 +82,6 @@ body {
 
 .header .navbar a:hover {
     position: relative;
-    /* font-weight: 400; */
     text-shadow: 1px 0 1px #fff;
     font-size: 1.6rem;
     line-height: 1.75;
@@ -88,7 +89,16 @@ body {
     color: #ffffff;
 }
 
-.header .navbar .active a:hover::after {
+.header .navbar .navbar--active a {
+    position: relative;
+    text-shadow: 1px 0 1px #fff;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    text-align: center;
+    color: #ffffff;
+}
+
+.header .navbar .navbar--active a::after {
     content: "";
     display: block;
     position: absolute;
@@ -99,6 +109,18 @@ body {
     top: 15px;
     left: 7px;
 }
+
+/* .header .navbar .active a:hover {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 15px;
+    left: 7px;
+} */
 
 .header .action a {
     font-weight: 400;
@@ -111,6 +133,10 @@ body {
 .header .action .btn {
     width: 104px;
     margin-left: 28px;
+}
+
+.header .action .btn a {
+    color: #fff;
 }
 
 .header .action a:hover,
@@ -278,8 +304,26 @@ body {
     border-radius: 10px;
 }
 
+.service-summary .item:hover .icon {
+    background: #2e80ce;
+    color: #fff;
+}
+
 .service-summary .item .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
     margin-top: 12px;
+    width: 60px;
+    height: 60px;
+    background: #eff6fd;
+    border-radius: 50%;
+}
+
+.service-summary .info {
+    margin-left: 19px;
 }
 
 .service-summary .info .title {
@@ -396,6 +440,9 @@ body {
     text-decoration: none;
 }
 
+.work .work-bottom .work-item:hover .more {
+    color: #2e80ce;
+}
 /* ---------------- FEATURE --------------- */
 .feature {
     padding-top: 170px;
@@ -731,6 +778,10 @@ body {
     font-size: 1.4rem;
     color: #10375c;
     text-decoration: none;
+}
+
+.blog .event-list .event-item:hover .more {
+    color: #2e80ce;
 }
 
 /* WELCOME */
